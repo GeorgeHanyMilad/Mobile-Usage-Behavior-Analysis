@@ -76,7 +76,8 @@ Performed in **Power Query**:
      - `5 → Uses Always`  
    - Converted `App Usage Time` from minutes → hours
 
-📷 Power Query Preview: *(https://github.com/GeorgeHanyMilad/Mobile-Usage-Behavior-Analysis/blob/master/Power%20Query.jpg?raw=true)*
+## 📷 Power Query Preview:
+<img src="https://github.com/GeorgeHanyMilad/Mobile-Usage-Behavior-Analysis/blob/master/Power%20Query.jpg?raw=true" alt="Pivot Table 1" width="80%"/>
 
 ---
 
@@ -87,16 +88,16 @@ The analysis is powered by **Pivot Tables**, which summarize and structure the d
 
 <div align="center">
 
-**Pivot Tables - V1**
+## Pivot Tables - V1
 <img src="https://github.com/GeorgeHanyMilad/Mobile-Usage-Behavior-Analysis/blob/master/PivotTables_V1.jpg?raw=true" alt="Pivot Table 1" width="80%"/>
 
-**Pivot Tables - V2**
+## Pivot Tables - V2
 <img src="https://github.com/GeorgeHanyMilad/Mobile-Usage-Behavior-Analysis/blob/master/PivotTables_V2.jpg?raw=true" alt="Pivot Table 2" width="80%"/>
 
-**Pivot Tables - V3**
+## Pivot Tables - V3
 <img src="https://github.com/GeorgeHanyMilad/Mobile-Usage-Behavior-Analysis/blob/master/PivotTables_V3.jpg?raw=true" alt="Pivot Table 3" width="80%"/>
 
-**Pivot Tables - V4**: KPIs
+## Pivot Tables - V4: KPIs
 <img src="https://github.com/GeorgeHanyMilad/Mobile-Usage-Behavior-Analysis/blob/master/KPIs.jpg?raw=true" alt="Pivot Table 3" width="80%"/>
 
 </div>
@@ -109,7 +110,11 @@ The analysis is powered by **Pivot Tables**, which summarize and structure the d
 The interactive dashboard was built using **Pivot Tables, Charts, KPIs, and Slicers**.  
 All slicers are connected via **Report Connections** for a fully dynamic experience.  
 
-📷 Dashboard Preview: *(https://github.com/GeorgeHanyMilad/Mobile-Usage-Behavior-Analysis/blob/master/Dashboard.jpg?raw=true)*  
+📷 Dashboard Preview:
+
+<p align="center">
+  <img src="https://github.com/GeorgeHanyMilad/Mobile-Usage-Behavior-Analysis/blob/master/Dashboard.jpg?raw=true" alt="Dashboard" width="500px" height="500px">
+</p>
 
 ### 🔑 KPIs:
 - **Users:** 700  
