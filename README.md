@@ -2,10 +2,10 @@
   <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXFycDVxenZqaDl4enRkNzIzMTdjZXJnenVkcXc2OGF3azlyMXR1NCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/8f3nS1Gajtv70qNicE/giphy.gif" width="200px" height="200px">
 </p>
 
-# 📱 Mobile Usage Behavior Analysis (Excel Dashboard Project)
+# 📱 Mobile Usage Behavior Analysis (Excel Dashboard)
 
 <p align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXFycDVxenZqaDl4enRkNzIzMTdjZXJnenVkcXc2OGF3azlyMXR1NCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/8f3nS1Gajtv70qNicE/giphy.gif" alt="Project Preview" width="200px" height="200px">
+  <img src="https://github.com/GeorgeHanyMilad/Mobile-Usage-Behavior-Analysis/blob/master/Project%20Image.png?raw=true" alt="Project Preview" width="200px" height="200px">
 </p>
 
 ---
@@ -76,7 +76,7 @@ Performed in **Power Query**:
      - `5 → Uses Always`  
    - Converted `App Usage Time` from minutes → hours
 
-📷 Power Query Preview: *(ضع لينك الصورة)*
+📷 Power Query Preview: *(https://github.com/GeorgeHanyMilad/Mobile-Usage-Behavior-Analysis/blob/master/Power%20Query.jpg?raw=true)*
 
 ---
 
@@ -87,14 +87,17 @@ The analysis is powered by **Pivot Tables**, which summarize and structure the d
 
 <div align="center">
 
-**Pivot Table 1** – App Usage by Age Group  
-<img src="ضع_لينك_الصورة_الأولى" alt="Pivot Table 1" width="80%"/>
+**Pivot Tables - V1**
+<img src="https://github.com/GeorgeHanyMilad/Mobile-Usage-Behavior-Analysis/blob/master/PivotTables_V1.jpg?raw=true" alt="Pivot Table 1" width="80%"/>
 
-**Pivot Table 2** – Screen Time & Data Usage by Gender  
-<img src="ضع_لينك_الصورة_الثانية" alt="Pivot Table 2" width="80%"/>
+**Pivot Tables - V2**
+<img src="https://github.com/GeorgeHanyMilad/Mobile-Usage-Behavior-Analysis/blob/master/PivotTables_V2.jpg?raw=true" alt="Pivot Table 2" width="80%"/>
 
-**Pivot Table 3** – Apps Installed vs App Usage  
-<img src="ضع_لينك_الصورة_الثالثة" alt="Pivot Table 3" width="80%"/>
+**Pivot Tables - V3**
+<img src="https://github.com/GeorgeHanyMilad/Mobile-Usage-Behavior-Analysis/blob/master/PivotTables_V3.jpg?raw=true" alt="Pivot Table 3" width="80%"/>
+
+**Pivot Tables - V4**: KPIs
+<img src="https://github.com/GeorgeHanyMilad/Mobile-Usage-Behavior-Analysis/blob/master/KPIs.jpg?raw=true" alt="Pivot Table 3" width="80%"/>
 
 </div>
 
@@ -106,7 +109,7 @@ The analysis is powered by **Pivot Tables**, which summarize and structure the d
 The interactive dashboard was built using **Pivot Tables, Charts, KPIs, and Slicers**.  
 All slicers are connected via **Report Connections** for a fully dynamic experience.  
 
-📷 Dashboard Preview: *(ضع لينك الصورة)*  
+📷 Dashboard Preview: *(https://github.com/GeorgeHanyMilad/Mobile-Usage-Behavior-Analysis/blob/master/Dashboard.jpg?raw=true)*  
 
 ### 🔑 KPIs:
 - **Users:** 700  
