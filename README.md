@@ -4,9 +4,11 @@
 
 # 📱 Mobile Usage Behavior Analysis (Excel Dashboard)
 
-<p align="center">
-  <img src="https://github.com/GeorgeHanyMilad/Mobile-Usage-Behavior-Analysis/blob/master/Project%20Image.png?raw=true" alt="Project Preview" width="200px" height="200px">
-</p>
+<div align="center">
+
+<img src="https://github.com/GeorgeHanyMilad/Mobile-Usage-Behavior-Analysis/blob/master/Project%20Image.png?raw=true" alt="Project Image" width="80%"/>
+
+</div>
 
 ---
 
@@ -110,11 +112,13 @@ The analysis is powered by **Pivot Tables**, which summarize and structure the d
 The interactive dashboard was built using **Pivot Tables, Charts, KPIs, and Slicers**.  
 All slicers are connected via **Report Connections** for a fully dynamic experience.  
 
-📷 Dashboard Preview:
+## 📷 Dashboard Preview:
 
-<p align="center">
-  <img src="https://github.com/GeorgeHanyMilad/Mobile-Usage-Behavior-Analysis/blob/master/Dashboard.jpg?raw=true" alt="Dashboard" width="500px" height="500px">
-</p>
+<div align="center">
+
+<img src="https://github.com/GeorgeHanyMilad/Mobile-Usage-Behavior-Analysis/blob/master/Dashboard.jpg?raw=true" alt="Dashboard" width="80%"/>
+
+</div>
 
 ### 🔑 KPIs:
 - **Users:** 700  
