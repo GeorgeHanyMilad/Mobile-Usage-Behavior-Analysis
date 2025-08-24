@@ -1,0 +1,109 @@
+اسم المشروع: حط انت اسم للمشروه يكون مناسب للي انا عامله
+
+صورة للمشروع: لينك
+
+فكرة المشروع بتتكلم عن تحليل استخدام الهاتف المحمول باستخدام Excel فقط و هو مشروع "تحليل بيانات"
+
+هدفي من المشروع هو دراسة حاجة معينة : فهم سلوك المستخدمين البشريين واكتشاف احتمالية وجود إدمان عند فئات عمرية معينة أو جنس معين يعني هدفي اعرف الناس بتعمل ايه و ايه سبب ده علشان اخد قرار تجاهم مين بيقضي وقت طويل قدام الموبايل و السوشيال ميديا و مين بيستهلك نت كتير و هكذاا بقى .. عايز اشوف تأثير الموبايل على البشر عامل ازاي.
+
+الداتا بتاعتي عبارة عن فايل CSV واحد بس و جايبه من Kaggle و ده اللينك: https://www.kaggle.com/datasets/valakhorasani/mobile-device-usage-and-user-behavior-dataset
+
+الداتا بتاعتي فيها 11 عمود و 700 صف
+
+أسماء الأعمدة و شرحها قبل ما أعمل أي حاجة في الداتا:
+User ID, Device Model, Operating System, App Usage Time (min/day), Screen On Time (hours/day), Battery Drain (mAh/day), Number of Apps Installed, Data Usage (MB/day), Age, Gender, User Behavior Class 
+
+- عمود الـ User ID معناه: Unique identifier for each user
+- عمود الـ Device Model معناه: Model of the user's smartphone
+- عمود الـ Operating System معناه: The OS of the device (iOS or Android)
+- عمود الـ App Usage Time معناه: Daily time spent on mobile applications, measured in Minutes
+- عمود الـ Screen on Time معناه: Average hours per day the screen is active
+- عمود الـ Battery Drain معناه: Daily battery consumption in mAh
+- عمود الـ Number of Apps Installed معناه: Total apps available on the device
+- عمود الـ Data Usage معناه: Daily mobile data consumption in megabytes
+- عمود الـ Age معناه: Age of the user
+- عمود الـ Gender معناه: Gender of the user (Male or Female)
+- عمود الـ User Behavior Class معناه: Classification of user behavior based on usage patterns (1 to 5)
+
+طبقت مراحل ال Transformation و ال Cleaning في ال Power Query :
+- Identify Issues
+- Data Transformation
+- Quality Check
+
+الداتا مفهاش Duplicates و مفهاش Missing Values و مفهاش Outliers و استخدمت ال Box Plot علشان أتأكد .. يعني بمعنى أصح الداتا كانت تقريباً Perfect 
+
+- العمود بتاع User ID هو كان نوعه Whole Number بس أنا حولته ل Text لأني كده كده مش هعمل عمليات حسابية على العمود ده.
+
+- العمود بتاع User Behavior Class هو كان نوعه Whole Number بس أنا حولته ل Text لأني كده كده مش هعمل عمليات حسابية على العمود ده.
+
+- عملت بعد كده عمود جديد في مرحلة ال Power Query اللي هو Custom Column علشان اعمل Groups لل Ages و مسحت عمود ال Age القديم
+
+- علمت بعد كده عمود جديد في مرحلة ال Power Query اللي هو Custom Column علشان اعمل مسميات لل Behvior بدل من الارقام اللي مكتوبة
+عملت لل 1 : Uses Rarely
+عملت لل 2 : Uses Sometimes
+عملت لل 3 : Uses Normally
+عملت لل 4 : Uses Often
+عملت لل 5 : Uses Always
+و بعدها مسحت عمود ال Behavior القديم اللي كان فيه ارقام من 1 ل 5 علشان ممكن متكونش مفهومة للبعض.
+
+- بعد كده حولت عمود ال App Usage Time إلى ساعات بدل من دقائق عن طريق ال Custom Column و مسحت العمود القديم بحيث التوقيتات في الداتا كلها تبقى ماشية بنفس النظام و هو القياس بالساعات و ليس بالدقائق.
+و العمود بقى اسمه الجديد App Usage Time (hours/day)
+
+صورة الشغل في ال Power Query : لينك
+
+- و بعد كده عملت ال Pivot Tables الخاصة بـ الـ Charts و الـ KPIs 
+و دي الصور الخاصة ب ال Pivot Tables : 
+- أول صورة: لينك
+- تاني صورة: لينك
+- تالت صورة: لينك
+
+- و بعد كده عملت الداشبورد و حطيت فيها الـ Charts و الـ KPIs و الـ Slicers و ربطت كل Slicer بكل جداول الـ Pivot Tables عن طريق Report Connections بحيث لما أدوس على أي أوبشن في أي Slicer ف الداشبورد كلها تتغير على حسب هذا الاختيار و الموضوع يبقى Dynamic أكتر 
+
+و دي صورة الداشبورد: لينك
+
+الـ KPIs هي:
+- الـ Users : قيمتها 700
+- الـ Avg App Usage(Hr) : قيمتها 4.5
+- الـ Avg Screen Time (Hr) :قيمتها 5.3
+- الـ Avg Data (MB) : قيمتها 929.7
+- الـ Avg Apps Installed : قيمتها 51
+
+الـ Charts :
+- أولاً: Apps Usage(Hr) by Age
+- ثانياً: Screen Time(Hr) by Age
+- ثالثاً: Data Usage(MB) by Age & Gender
+- رابعاً: Apps Usage(Hr) vs Data Usage(MB)
+- خامساً: Apps Installed vs Apps Usage(Hr)
+- سادساً: Apps Usage(Hr) by Gender
+
+الـ Slicers :
+- أولاً: Gender
+- ثانياً: Age
+- ثالثاً: User Behavior Class
+
+و بعد ما خلصت الداشبورد استنتجت إن: الاستنتاجات (Insights)
+- الفئة العمرية (18-25) بتقضي أطول وقت على التطبيقات بمتوسط 4.8 ساعة يومياً
+- الفئة العمرية (18-25) هي أكتر فئة محملة تطبيقات بمتوسط 54 تطبيق في الموبايل
+- الفئة العمرية (46-59) بتقضي أطول وقت على الموبايل عموماً بمتوسط 5.5 ساعة يومياً
+- الفئة العمرية (36-45) أقل في استخدام التطبيقات و أقل في استخدام الموبايل عموماً و أقل في عدد التطبيقات المحملة و أقل في استهلاك البيانات.
+- أعلى استهلاك للبيانات كان للفئة العمرية (46-59) بمتوسط 1022.4 MB للذكور و 929.2 MB للإناث
+- الذكور والإناث متقاربين جدًا في معدل استخدام التطبيقات بالساعات يومياً (4.53 ساعة للإناث مقابل 4.51 ساعة للذكور)
+- كل ما قضينا وقت أطول على الـ Apps كل ما زاد استهلاك البيانات (هنا العلاقة طردية)
+- كل ما زودنا عدد الـ Apps اللي بنزلها على الموبايل كل ما زاد الوقت اللي بنقضيه على ال Apps بالساعات يومياً (هنا العلاقة طردية)
+
+الأسباب المحتملة (Possible Reasons)
+- الفئة (36-45) يمكن يكونوا مشغولين أكتر بظروف العمل والأسرة فده قلل استخدامهم للموبايل و للتطبيقات و لكل حاجة.
+- الفئة (18–25): عندهم فضول وتجربة مستمرة للتطبيقات الجديدة (Social Media, Games, Entertainment Apps) ووقت فراغ أكبر مقارنةً بالفئات الأكبر وبالتالي معدلات استخدامهم وتحميل التطبيقات أعلى.
+- الفئة (46–59): ممكن يعتمدوا بشكل كبير على الموبايل كوسيلة أساسية للاتصال ومتابعة الأخبار والفيديوهات وده يفسر ليه استهلاكهم للبيانات وساعات الشاشة عالي جدًا.
+- تقارب الذكور والإناث في App Usage: يرجع لانتشار واسع للتطبيقات الاجتماعية (WhatsApp, Facebook, Instagram, TikTok) اللي بيستخدمها الجنسين بنفس المعدل تقريبًا فمبقاش فيه فرق جوهري.
+- العلاقة الطردية (App Usage ↔ Data Usage): منطقي لأن التطبيقات الأكثر استهلاكًا للوقت غالبًا معتمدة على الإنترنت (Social Media, Video Streaming).
+- العلاقة الطردية (Apps Installed ↔ App Usage): المستخدم اللي عنده عدد تطبيقات أكبر بيكون عنده بدائل أكتر للترفيه أو العمل وبالتالي بينوع استخدامه وبيقضي وقت أطول.
+
+الـ Recommendations (التوصيات):
+- توعية الفئة 18–25 بأهمية إدارة الوقت على التطبيقات.
+- تشجيع الفئة 46–59 على استخدام أدوات للتحكم في استهلاك البيانات.
+- عمل حملة توعية عبر TikTok و Instagram و Facebook تستهدف الفئة 18–25 لزيادة الوعي بإدارة الوقت.
+- تشجيع الفئة 26–35 على تقليل استخدام السوشيال ميديا وزيادة التطبيقات التعليمية/العملية.
+- إضافة App Notification أو Reminder بعد 3 ساعات استخدام متواصل ينبه المستخدم لإدارة وقته.
+
+
